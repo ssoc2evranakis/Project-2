@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="onLoad()">
+    <h1>Υπολογιστμός Εμβαδού Τριγώνου</h1>
+    <p>Για τον υπολογισμό του θα πρέπει να ξέρουμε τη βάση
+        και το ύψος του τριγώνου
+    </p>
+    <div class="row">
+        <img src="trig2.gif" alt="σχήμα τριγώνου">
+    </div>
+    <div class="row">
+        <div class="column"><p>Βάση</p></div>
+        <div class="column"><p>Ύψος</p></div>
+        <div class="column"><p>Εμβαδόν</p></div>
+    </div>
+    <div class="row">
+        <div class="column"><input id="bash"></div>
+        <div class="column"><input id="ypsos"></div>
+        <div class="column"><input id="emvadon"></div>
+    </div>
+    <div class="row"><button onclick="onClick()">Υπολογισμός</button></div>
+    
+    
+    <script>
+        let bash=document.getElementById("bash");
+        let ypsos=document.getElementById("ypsos");
+        let emvadon=document.getElementById("emvadon");
+
+        function onLoad(){
+            console.log(emvadon);
+            emvadon.disabled = true;
+            ypsos.value = null;
+            bash.value = null;
+            emvadon.value = null;
+        }
+
+        function onClick(){
+            console.log(bash.value*ypsos.value/2);
+            emvadon.value=bash.value*ypsos.value/2;
+            emvadon.disabled=false;
+            emvadon.style.border = '8px solid green';
+        }
+
+
+       
+    </script>
+</body>
+</html>
